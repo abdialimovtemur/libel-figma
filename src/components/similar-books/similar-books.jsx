@@ -1,19 +1,20 @@
-import React from "react";
+import React from 'react';
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
 
+export const Similar_books = ({ data, title }) => {
+    // Faqat 3 ta elementni olish
+    const displayedData = data.slice(2);
 
-export const NewProducts = ({ data, title }) => {
     return (
-        <div className={style.NewProducts}>
-            <h1 className={style.pr_title}>{title}</h1>
-            <div className={style.NewProducts__items}>
+        <div className={style.Similar_books}>
+            <h2>Ўхшаш китоблар</h2>
+            <div className={style.Similar_books__items}>
                 {
-                    data.map((item, index) => {
+                    displayedData.map((item, index) => {
                         return (
-                            <Link to={`product/${item.id}`}>
-                                <div key={index} className={style.NewProducts__item}>
-                                    <img src={item.img} alt="img" />
+                            <div key={index} className={style.NewProducts__item}>
+                                <img src={item.img} alt="img" />
+                                <div className={style.NewProducts__item__div}>
                                     <div className={style.NewProducts__item__info}>
                                         <h4>{item.disc}</h4>
                                         <p>{item.title}</p>
@@ -25,11 +26,12 @@ export const NewProducts = ({ data, title }) => {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         )
                     })
                 }
             </div>
+            <button>Кўпроқ</button>
         </div>
     )
 }

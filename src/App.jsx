@@ -9,8 +9,8 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="product" element={<Product />} />
+          <Route index element={<Home />} />
+          <Route path="product/:id" element={<Product />} />
           <Route path="profile" element={<Profile />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>

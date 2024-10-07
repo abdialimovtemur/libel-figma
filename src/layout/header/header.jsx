@@ -6,12 +6,13 @@ import { MenuIcon } from "../../assets/icons/menuIcon";
 import uzbflag from "../../assets/uzbflage.svg"
 import { UserIcon } from "../../assets/icons/userIcon";
 import { Navbar } from "../../components/navbar/navbar";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
     return (
         <header className="container">
             <div className={style.header}>
-                <div><img src={logo} alt="" /></div>
+                <Link to={"/"}><img src={logo} alt="" /></Link>
 
                 <div className={style.header_form}>
                     <div className={style.ruknlar}>
@@ -41,10 +42,10 @@ export const Header = () => {
                         </select>
                     </div>
 
-                    <div className={style.profile}>
+                    <Link to={"profile"} className={style.profile}>
                         <UserIcon/>
                         <p>Кириш</p>
-                    </div>
+                    </Link>
 
                 </div>
             </div>

@@ -1,0 +1,92 @@
+.Item_discription_all{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.itemDescription {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .category {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  
+    span {
+      margin-right: 5px;
+    }
+  
+    .stars {
+      color: gold;
+    }
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .author {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+  
+    span {
+      display: block;
+    }
+  }
+  
+  .pricing {
+    font-size: 16px;
+    margin-bottom: 20px;
+  
+    .originalPrice {
+      text-decoration: line-through;
+      color: #999;
+      margin-right: 10px;
+    }
+  
+    .discountedPrice {
+      color: #e60000;
+      font-weight: bold;
+    }
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  
+    .addToCart {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .like {
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  

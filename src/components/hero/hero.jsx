@@ -1,6 +1,6 @@
 import React from "react";
-import Hero1 from "../../assets/hero1.svg"
-import style from "./style.module.scss"
+import Hero1 from "../../assets/hero1.svg";
+import style from "./style.module.scss";
 
 export const Hero = ({ data }) => {
     return (
@@ -13,9 +13,9 @@ export const Hero = ({ data }) => {
 
                 <div className={style.hero__left__data}>
                     {
-                        data.map((item) => {
+                        data.map((item, index) => {
                             return (
-                                <div className={style.hero__left__data__items}>
+                                <div key={index} className={style.hero__left__data__items}>
                                     <img src={item.img} alt="img" />
                                     <div>{item.title}</div>
                                 </div>
@@ -33,5 +33,5 @@ export const Hero = ({ data }) => {
                 <button className={style.hero__right__btn}>Обуна бўлиш</button>
             </div>
         </div>
-    )
-}
+    );
+};
